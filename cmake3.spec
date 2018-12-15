@@ -46,7 +46,8 @@
 
 Name:           %{orig_name}%{?name_suffix}
 Version:        %{major_version}.%{minor_version}.2
-Release:        1%{?dist}
+#Release:        1%{?dist}
+Release:        0%{?dist}
 Summary:        Cross-platform make system
 
 # most sources are BSD
@@ -404,6 +405,9 @@ update-mime-database %{?fedora:-n} %{_datadir}/mime &> /dev/null || :
 
 
 %changelog
+* Sat Dec 15 2018 Nico Kadel-Garcia <nakdel@gmail.com> - 3.12.2-0
+- Roll back to RHEL 6
+
 * Thu Oct 04 2018 Antonio Trande <sagitter@fedoraproject.org> - 3.12.2-1
 - Update to cmake-3.12.2
 
